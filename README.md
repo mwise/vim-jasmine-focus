@@ -1,7 +1,8 @@
-jasmine-focus.vim
+vim-jasmine-focus.vim
 ===============
 
-Some Vim helpers for managing Jasmine focus tags.
+Some Vim helpers for managing Jasmine focus tags. Designed for use with
+[jasmine-focus.js](https://github.com/mwise/jasmine-focus).
 
 ## Usage
 
