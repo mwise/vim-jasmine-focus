@@ -46,9 +46,9 @@ fun! s:AddFocusTag(pattern)
   let line = getline(match)
   if s:LineHasFocusTag(line)
   else
-    let functionTag = 'function(){'
-    let patternToReplace = '\(["'']\), ' . functionTag
-    let replacement = '\1, ' . s:focusTag . ', ' . functionTag
+    let functionTag = 'function\s*()\s*{'
+    let patternToReplace = '\(["'']\), \(' . functionTag . '\)'
+    let replacement = '\1, ' . s:focusTag . ', ' . '\2'
     let repl = substitute(line, patternToReplace, replacement, "")
     call setline(match, repl)
   endif
